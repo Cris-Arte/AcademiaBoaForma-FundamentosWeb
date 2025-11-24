@@ -1,0 +1,751 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #66ceea 0%, #2530bd 100%);
+    color: #333;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.3em;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Menu Principal */
+.menu {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.menu select {
+    padding: 14px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    margin-right: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 250px;
+}
+
+.menu select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.menu select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.menu button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #136883;
+    color: white;
+    cursor: pointer;
+    margin: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu button:hover {
+    background: #2e3843b0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+/* Container da janela principal*/
+/* ===== CONTAINER PRINCIPAL ===== */
+.bigcontainer {
+    width: 100%;
+    max-width: 1300px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===== SEÇÃO LOCALIZAÇÃO (ESQUERDA) ===== */
+.localizacao {
+    background: rgba(255, 255, 255, 0.95);
+    width: 350px;
+    height: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.localizacao h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.localizacao h3 {
+    color: #2c3e50;
+    margin: 20px 0 15px 0;
+    font-size: 1.3em;
+}
+
+.info-contato p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-contato strong {
+    color: #2c3e50;
+}
+
+/* ===== REDES SOCIAIS COM ÍCONES ===== */
+.redes-sociais {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.redes-links {
+    display: flex;
+    justify-content: center; /* Alinha os ícones no centro */
+    gap: 15px; /* Espaço entre os ícones */
+    margin-top: 15px;
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+}
+
+.rede-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Largura fixa para os ícones */
+    height: 50px; /* Altura fixa para os ícones */
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 50%; /* Torna circular */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
+.rede-social:hover {
+    background: #3498db;
+    border-color: #3498db;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.rede-social img {
+    width: 24px; /* Tamanho da imagem */
+    height: 24px;
+    object-fit: contain; /* Mantém a proporção */
+    filter: brightness(0.8); /* Leve escurecimento */
+    transition: filter 0.3s ease;
+}
+
+.rede-social:hover img {
+    filter: brightness(0) invert(1); /* Torna a imagem branca no hover */
+}
+/* ===== MAPA ===== */
+.mapa {
+    margin-top: 25px;
+}
+
+.mapa img {
+    width: rgb(255, 255, 255), 0, 0), 0, 0)
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #3498db;
+}
+
+rgb(28, 88, 108)rgb(54, 108, 137)/* ===== MINI GALERIA (DIREITA) ===== */
+.minigaleria {
+    background: rgba(255, 255, 255, 0.95);
+    flex: 1;
+    height: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.minigaleria h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* ===== GALERIA (MESMO ESTILO DA PÁGINA PILATES) ===== */
+.galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.imagem-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.imagem-container img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.descricao {
+    color: #2c3e50;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 10px;
+}
+
+/* ===== SETAS ===== */
+.seta {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.seta img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.seta:hover {
+    background: white;
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .bigcontainer {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    
+    .localizacao, .minigaleria {
+        width: 100%;
+        height: auto;
+    }
+    
+    .imagem-container img {
+        width: 100%;
+        max-width: 400px;
+        height: 250px;
+    }
+    
+    .galeria {
+        gap: 15px;
+    }
+}
+
+/* Container da Galeria */
+.galeria-container {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Galeria com setas */
+.galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.seta {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.seta img{
+	max-width: 100%;
+}
+
+.seta:hover {
+    background: white;
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.seta:active {
+    transform: scale(0.95);
+}
+
+/* Container da Imagem */
+.imagem-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.imagem-container:hover {
+    transform: scale(1.02);
+}
+
+.imagem-container img {
+    width: 550px;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Contador de Imagens */
+.contador {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+/* Descricao da Aula */
+.descricao {
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== ESTILOS PARA FORMULÁRIOS ===== */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Estilos para os Radio Buttons dos Planos */
+.radio-group {
+    margin: 15px 0;
+}
+
+.radio-option {
+    margin: 10px 0;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.radio-option:hover {
+    background: #f8f9fa;
+    border-color: #667eea;
+}
+
+.radio-option.selected {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.radio-option strong {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Botão de Submit */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== ESTILOS PARA PÁGINA DE SUCESSO ===== */
+.sucesso-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.icone-sucesso {
+    font-size: 80px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.mensagem-sucesso {
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid #c3e6cb;
+}
+
+.mensagem-sucesso h2 {
+    margin-bottom: 10px;
+    color: #155724;
+}
+
+.mensagem-sucesso p {
+    margin: 10px 0;
+}
+
+/* ===== LISTA DE CLIENTES (ÁREA FUNCIONÁRIOS) ===== */
+.lista-clientes {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cliente-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cliente-item:last-child {
+    border-bottom: none;
+}
+
+.cliente-info {
+    flex-grow: 1;
+}
+
+.cliente-nome {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cliente-detalhes {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.btn-excluir {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.btn-excluir:hover {
+    background: #ff5252;
+    transform: translateY(-1px);
+}
+
+.sem-clientes {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+/* ===== MENSAGENS DE SUCESSO/ERRO ===== */
+.mensagem {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensagem.sucesso {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensagem.erro {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2.2em;
+    }
+    
+    .menu {
+        text-align: center;
+    }
+    
+    .menu select {
+        margin-right: 0;
+        margin-bottom: 15px;
+        min-width: 200px;
+    }
+    
+    .galeria {
+        gap: 15px;
+    }
+    
+    .imagem-container img {
+        width: 100%;
+        max-width: 400px;
+        height: 280px;
+    }
+    
+    .seta {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .form-container {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    
+    .lista-clientes {
+        margin: 20px 15px;
+    }
+    
+    .cliente-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .imagem-container img {
+        height: 220px;
+    }
+    
+    .descricao {
+        font-size: 1.1em;
+    }
+    
+    .menu button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .form-container {
+        padding: 15px;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.galeria-container, .form-container, .lista-clientes {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== ESTILOS PARA LINKS ===== */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffeb3b;
+}
+
+/* ===== SCROLL PERSONALIZADO ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
