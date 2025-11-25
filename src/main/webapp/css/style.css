@@ -37,6 +37,12 @@ body {
     font-weight: 300;
 }
 
+.ul-cadastroSucesso {
+	text-align: left; 
+	display: inline-block; 
+	margin: 20px 0;
+}
+
 /* Menu Principal */
 .menu {
     text-align: center;
@@ -586,7 +592,18 @@ rgb(28, 88, 108)rgb(54, 108, 137)/* ===== MINI GALERIA (DIREITA) ===== */
 }
 
 .btn-excluir {
-    background: #ff6b6b;
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.btn-atualizar{
+	background: green;
     color: white;
     border: none;
     padding: 8px 15px;
@@ -597,6 +614,11 @@ rgb(28, 88, 108)rgb(54, 108, 137)/* ===== MINI GALERIA (DIREITA) ===== */
 }
 
 .btn-excluir:hover {
+    background: #ff5252;
+    transform: translateY(-1px);
+}
+
+.btn-atualizar:hover {
     background: #ff5252;
     transform: translateY(-1px);
 }
@@ -749,3 +771,61 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
+
+.lista-clientes {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+        
+.cliente-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+        
+.cliente-item:last-child {
+    border-bottom: none;
+}
+        
+.cliente-info {
+    flex-grow: 1;
+}
+        
+.cliente-nome {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+        
+.cliente-detalhes {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+        
+.btn-excluir {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+        
+.btn-excluir:hover {
+    background: #ff5252;
+}
+        
+.sem-clientes {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+ }

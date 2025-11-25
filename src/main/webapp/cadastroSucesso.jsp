@@ -22,7 +22,7 @@
             </div>
             
             <p><strong>Próximos passos:</strong></p>
-            <ul style="text-align: left; display: inline-block; margin: 20px 0;">
+            <ul class="ul-cadastroSucesso">
                 <li>Apresentar documento de identidade na recepção</li>
                 <li>Realizar avaliação física gratuita</li>
                 <li>Definir seus objetivos com nosso personal trainer</li>

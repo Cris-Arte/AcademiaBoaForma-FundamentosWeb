@@ -36,65 +36,6 @@
     <meta charset="UTF-8">
     <title>Área Funcionários - Academia Boa Forma</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .lista-clientes {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .cliente-item {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .cliente-item:last-child {
-            border-bottom: none;
-        }
-        
-        .cliente-info {
-            flex-grow: 1;
-        }
-        
-        .cliente-nome {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #333;
-        }
-        
-        .cliente-detalhes {
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        
-        .btn-excluir {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em;
-        }
-        
-        .btn-excluir:hover {
-            background: #ff5252;
-        }
-        
-        .sem-clientes {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-style: italic;
-        }
-    </style>
 </head>
 <body>
     <div class="header">
@@ -133,6 +74,7 @@
                     <div>
                         <a href="funcionarios.jsp?acao=excluir&id=<%= cliente.getId() %>" 
                            onclick="return confirm('Tem certeza que deseja excluir <%= cliente.getNome() %>?')">
+                           	<button class="btn-atualizar">Atualizar</button>
                             <button class="btn-excluir">Excluir</button>
                         </a>
                     </div>
